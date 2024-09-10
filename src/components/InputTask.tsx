@@ -1,5 +1,7 @@
 export default function InputTask() {
     return(
-        <p>Text field for inputting a task</p>
+        <>
+            <input placeholder="Add new task" className="input-task"></input>
+        </>
     );
 }

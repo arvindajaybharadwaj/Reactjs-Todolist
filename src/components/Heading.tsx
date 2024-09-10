@@ -1,5 +1,7 @@
 export default function Heading() {
     return(
-        <p>Todo List (Heading)</p>
+        <div className="heading">
+            <p>Todo List</p>
+        </div>
     );
 }

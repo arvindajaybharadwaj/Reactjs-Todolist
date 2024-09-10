@@ -1,5 +1,7 @@
 export default function AddTaskButton() {
     return(
-        <p>This is going to be the button</p>
+        <>
+            <button className="add-task-button">Add Task</button>
+        </>
     );
 }

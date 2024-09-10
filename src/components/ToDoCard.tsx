@@ -1,5 +1,8 @@
 export default function ToDoCard() {
     return(
-        <p>This is going to be a todo card</p>
+        <div className="todo-card">
+            <input type="checkbox" id="task1"></input>
+            <label htmlFor="task1">To Do</label>
+        </div>
     );
 }
