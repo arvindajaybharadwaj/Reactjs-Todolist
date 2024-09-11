@@ -60,7 +60,7 @@
 
 .add-task-button {
     width: calc(99% - var(--golden-ratio));
-    height: 25%;
+    height: 30%;
     border-radius: 5px;
     color: #EEF1EF;
     font-size: 1rem;
@@ -90,4 +90,31 @@
     display: flex;
     align-items: center;
 }
+
+.task-checkbox {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #232020;
+    border-radius: 2px;
+    margin: 1rem;
+    position: relative;
+}
+
+.task-checkbox:checked::after {
+    content: "";
+    position: absolute;                  /* Adjust vertical position */
+    left: 4px;                 /* Adjust horizontal position */
+    width: 5px;                /* Width of the checkmark */
+    height: 10px;              /* Height of the checkmark */
+    border: solid white;       /* Color and style of the checkmark */
+    border-width: 0 2px 2px 0; /* Thickness and sides of the border */
+    transform: rotate(45deg);  /* Rotates to create checkmark shape */
+}
+
+.task-label {
+    color: #EEF1EF;
+    font-size: 1rem;
+}
+
 
