@@ -1,1 +1,9 @@
-
+.main-container {
+    background-color: #232020;
+    width: calc(100% / 1.618);
+    height: calc(100% / 1.618);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
