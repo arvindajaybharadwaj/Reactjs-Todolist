@@ -1,9 +1,79 @@
+:root {
+    --golden-ratio: 100% / 1.618;
+}
+
 .main-container {
     background-color: #232020;
-    width: calc(100% / 1.618);
-    height: calc(100% / 1.618);
+    width: calc(var(--golden-ratio));
+    height: calc(var(--golden-ratio));
     border-radius: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.heading-container {
+    width: calc(var(--golden-ratio));
+    height: calc(100% - var(--golden-ratio));
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.heading {
+    color: #EEF1EF;
+    font-size: 2.5rem;
+}
+
+.task-input-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.input-task {
+    position: relative;
+    bottom: 1%;
+    width: calc(var(--golden-ratio));
+    height: 25%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.0625rem solid #EEF1EF;
+}
+
+.input-task::placeholder {
+    color: #544D4D;
+    font-size: 1.5rem;
+}
+
+.input-task:focus {
+    color: #EEF1EF;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    border-bottom: 0.0625rem solid #EEF1EF;
+}
+
+.add-task-button {
+    width: calc(99% - var(--golden-ratio));
+    height: 25%;
+    border-radius: 5px;
+    color: #EEF1EF;
+    font-size: 1rem;
+    background-color: #A62639;
+    border: none;
+}
+
+.add-task-button:active {
+    background-color: #8f1b2c;
+}
+
+
+.todo-list-container {
+    width: calc(var(--golden-ratio));
+    height: calc(var(--golden-ratio));
 }

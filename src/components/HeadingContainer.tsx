@@ -6,8 +6,10 @@ export default function HeadingContainer() {
     return(
         <div className="heading-container">
             <Heading />
-            <InputTask />
-            <AddTaskButton />
+            <div className="task-input-container">
+                <InputTask />
+                <AddTaskButton />
+            </div>
         </div>
     );
 }
