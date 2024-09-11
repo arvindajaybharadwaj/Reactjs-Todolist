@@ -4,8 +4,6 @@ export default function ToDoListContainer() {
     return(
         <div className="todo-list-container">
             <ToDoCard />
-            <ToDoCard />
-            <ToDoCard />
         </div>
     );
 }

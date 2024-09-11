@@ -72,8 +72,22 @@
     background-color: #8f1b2c;
 }
 
-
 .todo-list-container {
     width: calc(var(--golden-ratio));
     height: calc(var(--golden-ratio));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.todo-card {
+    background-color: #373333;
+    width: 100%;
+    height: 3rem;
+    border-radius: 10px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
