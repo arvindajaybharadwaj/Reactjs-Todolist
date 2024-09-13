@@ -25,6 +25,7 @@
 .heading {
     color: #EEF1EF;
     font-size: 2.5rem;
+    font-weight: bold;
 }
 
 .task-input-container {
@@ -61,7 +62,7 @@
 .add-task-button {
     width: calc(99% - var(--golden-ratio));
     height: 3rem;
-    border-radius: 5px;
+    border-radius: 7px;
     color: #EEF1EF;
     font-size: 1rem;
     background-color: #A62639;
@@ -84,7 +85,7 @@
     background-color: #373333;
     width: 100%;
     height: 3rem;
-    border-radius: 5px;
+    border-radius: 7px;
     margin-top: 1.25rem;
     margin-bottom: 0rem;
     display: flex;
