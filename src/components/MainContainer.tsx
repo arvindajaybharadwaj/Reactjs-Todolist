@@ -3,12 +3,27 @@ import ToDoListContainer from './ToDoListContainer';
 import { useState } from 'react';
 
 export default function MainContainer() {
-    const [tasksArray, setTasksArray] = useState([]); // initialize an empty array that contains all the tasks
-    const [task, setTask] = useState(""); // holds the current task
+    const [tasksArray, setTasksArray] = useState<string[]>([]); // initialize an empty array that contains all the tasks
+    const [taskInput, setTaskInput] = useState(""); // holds the current task
+
+    function handleClick(): void {
+        const input = taskInput.trim();
+        if (input) {
+            setTasksArray([...tasksArray, input]); // creating a new array with input in it
+            console.log(`Added ${input} to tasks`); // debugging
+            setTaskInput(""); // task input field is reset to an empty string
+        } else {
+            alert("Add a valid task");
+        }
+    }
 
     return(
         <div className="main-container">
-            <HeadingContainer />
+            <HeadingContainer 
+                taskInput = {taskInput}
+                setTaskInput = {setTaskInput}
+                handleAddTask = {handleClick}
+            />
             <ToDoListContainer />
         </div>
     );
