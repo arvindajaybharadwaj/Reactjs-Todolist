@@ -1,12 +1,21 @@
 import ToDoCard from './ToDoCard';
 
-export default function ToDoListContainer() {
+interface toDoListContainerProps {
+    tasksArray: string[];
+}
+
+export default function ToDoListContainer({tasksArray}: toDoListContainerProps) {
+
+    const taskIndex = tasksArray.length - 1;
+    const taskName = tasksArray[tasksArray.length - 1];
+
+    const taskId = `${taskName}${taskIndex}`;
+
     return(
         <div className="todo-list-container">
-            <ToDoCard task_id="task1" task="Go to the gym" />
-            <ToDoCard task_id="task2" task="Meditate for 10 mins" />
-            <ToDoCard task_id="task3" task="Code Todo List" />
-            <ToDoCard task_id="task4" task="4 hours of deep work" />
+            {tasksArray.map((_, index) => {
+                return <ToDoCard key={index} taskId={taskId} taskName={taskName} />;
+            })}
         </div>
     );
 }

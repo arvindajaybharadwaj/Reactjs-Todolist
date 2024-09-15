@@ -1,14 +1,14 @@
 interface toDoCardProps {
-    task_id: string;
-    task: string;
+    taskId: string;
+    taskName: string;
 } // type safety for passing props to ToDoCard component
 
-export default function ToDoCard({task_id, task}: toDoCardProps) {
+export default function ToDoCard({taskId, taskName}: toDoCardProps) {
     return(
         <div className="todo-card">
             <div className="main-task">
-                <input type="checkbox" id={task_id} className="task-checkbox"></input>
-                <label htmlFor={task_id} className="task-label">{task}</label>
+                <input type="checkbox" id={taskId} className="task-checkbox"></input>
+                <label htmlFor={taskId} className="task-label">{taskName}</label>
             </div>
             <div className="trash-button-container">
                 <button className="trash-button">

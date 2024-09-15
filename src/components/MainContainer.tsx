@@ -24,7 +24,7 @@ export default function MainContainer() {
                 setTaskInput = {setTaskInput}
                 handleAddTask = {handleClick}
             />
-            <ToDoListContainer />
+            <ToDoListContainer tasksArray={tasksArray} />
         </div>
     );
 }
