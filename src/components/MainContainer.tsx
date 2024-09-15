@@ -6,15 +6,18 @@ export default function MainContainer() {
     const [tasksArray, setTasksArray] = useState<string[]>([]); // initialize an empty array that contains all the tasks
     const [taskInput, setTaskInput] = useState(""); // holds the current task
 
-    function handleClick(): void {
+    function handleAddTask(): void {
         const input = taskInput.trim();
         if (input) {
             setTasksArray([...tasksArray, input]); // creating a new array with input in it
-            console.log(`Added ${input} to tasks`); // debugging
             setTaskInput(""); // task input field is reset to an empty string
         } else {
             alert("Add a valid task");
         }
+    }
+
+    function handleDeleteTask(index: number): void {
+        console.log(`Deleted Task ${index}`);
     }
 
     return(
@@ -22,9 +25,12 @@ export default function MainContainer() {
             <HeadingContainer 
                 taskInput = {taskInput}
                 setTaskInput = {setTaskInput}
-                handleAddTask = {handleClick}
+                handleAddTask = {handleAddTask}
             />
-            <ToDoListContainer tasksArray={tasksArray} />
+            <ToDoListContainer 
+                tasksArray={tasksArray}
+                handleDeleteTask={handleDeleteTask} 
+            />
         </div>
     );
 }
