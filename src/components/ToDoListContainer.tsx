@@ -5,16 +5,10 @@ interface toDoListContainerProps {
 }
 
 export default function ToDoListContainer({tasksArray}: toDoListContainerProps) {
-
-    const taskIndex = tasksArray.length - 1;
-    const taskName = tasksArray[tasksArray.length - 1];
-
-    const taskId = `${taskName}${taskIndex}`;
-
     return(
         <div className="todo-list-container">
-            {tasksArray.map((_, index) => {
-                return <ToDoCard key={index} taskId={taskId} taskName={taskName} />;
+            {tasksArray.map((task, index) => {
+                return <ToDoCard key={index} taskId={`${task}${index}`} task={task} />;
             })}
         </div>
     );
