@@ -37,6 +37,8 @@
 }
 
 .input-task {
+    color: #EEF1EF;
+    font-size: 1.5rem;
     position: relative;
     bottom: 1%;
     width: calc(var(--golden-ratio));
