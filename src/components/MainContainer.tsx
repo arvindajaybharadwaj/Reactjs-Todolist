@@ -8,12 +8,14 @@ export default function MainContainer() {
 
     function handleAddTask(): void {
         const input = taskInput.trim();
-        if (input) {
+        if (input && tasksArray.length < 4) {
             setTasksArray([...tasksArray, input]); // creating a new array with input in it
-            setTaskInput(""); // task input field is reset to an empty string
+        } else if (tasksArray.length == 4) {
+            alert("Complete tasks first to add more");
         } else {
-            alert("Add a valid task");
+            alert("Enter a valid task");
         }
+        setTaskInput(""); // task input field is reset to an empty string
     }
 
     function handleDeleteTask(index: number): void {
