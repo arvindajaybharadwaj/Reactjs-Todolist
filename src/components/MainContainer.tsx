@@ -17,7 +17,13 @@ export default function MainContainer() {
     }
 
     function handleDeleteTask(index: number): void {
-        console.log(`Deleted Task ${index}`);
+        const filteredTasksArray: string[] = [];
+        for (let i = 0; i < tasksArray.length; i++) {
+            if (i != index) {
+                filteredTasksArray.push(tasksArray[i]);
+            }
+        }
+        setTasksArray([...filteredTasksArray]);
     }
 
     return(
